@@ -1,29 +1,19 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '../styles/global.css';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "我的 Astro 学习博客";
 ---
-<Layout title="Welcome to Astro.">
-	<main>
-		<body>
-			<Header />
-			<h1><span class="text-gradient"> {pageTitle} </span></h1>
-			<p>在这里，我将分享我的学习 Astro 之旅。</p>
-			<ul>
-				<li><a href="/posts/post-1/">文章 1</a></li>
-				<li><a href="/posts/post-2/">文章 2</a></li>
-				<li><a href="/posts/post-3/">文章 3</a></li>
-			</ul>
-			<p>如果你有任何问题或建议，请随时与我联系。</p>
-		<Footer />
-		<script>
-			import "../scripts/menu.js";
-		  </script>
-		</body>
-</main>
-</Layout>
+
+<BaseLayout pageTitle={pageTitle}>
+
+	<p>在这里，我将分享我的学习 Astro 之旅。</p>
+	<ul>
+		<li><a href="/posts/post-1/">文章 1</a></li>
+		<li><a href="/posts/post-2/">文章 2</a></li>
+		<li><a href="/posts/post-3/">文章 3</a></li>
+	</ul>
+	<p>如果你有任何问题或建议，请随时与我联系。</p>
+</BaseLayout>
+
   <style>
 	/* main {
 		margin: auto;
